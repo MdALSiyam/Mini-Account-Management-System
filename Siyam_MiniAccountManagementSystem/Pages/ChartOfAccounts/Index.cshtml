@@ -1,0 +1,53 @@
+﻿@page
+@model Siyam_MiniAccountManagementSystem.Pages.ChartOfAccounts.IndexModel
+@{
+    ViewData["Title"] = "Chart of Accounts";
+}
+
+<h1>Chart of Accounts</h1>
+
+<p class="d-flex float-end mt-2">
+    <a asp-page="Create" class="btn btn-success p-2">Create New Account</a> |
+    <a asp-page-handler="ExportToExcel" class="btn btn-secondary p-2">Export to Excel</a>
+</p>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<table class="table table-bordered table-striped text-center">
+    <thead class="bg-info text-white">
+        <tr>
+            <th>Account Code</th>
+            <th>Account Name</th>
+            <th>Account Type</th>
+            <th>Parent Account</th>
+            <th>Active</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Accounts)
+        {
+            <tr>
+                <td>@item.AccountCode</td>
+                <td>@Html.Raw(item.DisplayName)</td>
+                <td>@item.AccountType</td>
+                <td>@item.ParentAccountName</td>
+                <td>@(item.IsActive ? "Yes" : "No")</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.AccountId" class="btn btn-primary btn-sm">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.AccountId" class="btn btn-warning btn-sm">Details</a> |
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@item.AccountId" onsubmit="return confirm('Are you sure you want to delete this account?');" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

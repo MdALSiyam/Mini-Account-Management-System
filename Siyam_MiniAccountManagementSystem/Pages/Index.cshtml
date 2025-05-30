@@ -1,0 +1,62 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <h1 class="display-4 text-center"><b>Welcome to Mini Account Management System</b></h1>
+    <hr />
+    <p class="text-center">
+        This application serves as a foundational "Mini Account Management System" developed using ASP.NET Core with Razor Pages and MS SQL Server.
+        It's designed to demonstrate key accounting functionalities and robust data management practices, adhering strictly to the use of stored procedures for all database interactions, with no LINQ usage.
+    </p>
+
+    <h2 class="mt-4 text-center">Core Features Implemented:</h2>
+    <hr />
+    <div class="row text-left">
+        <div class="col-md-6">
+            <h4>1. User Roles & Permissions</h4>
+            <ul>
+                <li>Manages users and assigns roles such as Admin, Accountant, and Viewer.</li>
+                <li>Provides access rights to different modules, ensuring secure and role-based operations, primarily managed via stored procedures.</li>
+            </ul>
+
+            <h4>2. Chart of Accounts</h4>
+            <ul>
+                <li>Allows for the creation, updating, and deletion of various account types (e.g., Cash, Bank, Receivable, Equity, Expense, Asset, Liability).</li>
+                <li>All account management operations are handled through the "sp_ManageChartOfAccounts" stored procedure.</li>
+                <li>Features a display of accounts in a hierarchical tree structure, demonstrating parent/child relationships.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4>3. Voucher Entry Module</h4>
+            <ul>
+                <li>Supports the creation and management of different voucher types, including Journal Vouchers, Payment Vouchers, and Receipt Vouchers.</li>
+                <li>The voucher entry form includes essential fields such as Date, Reference Number, and Description.</li>
+                <li>Enables multi-line Debit and Credit entries with account selection via dropdowns.</li>
+                <li>Ensures that total debits always equal total credits for balanced entries.</li>
+                <li>All voucher saving operations are handled by the "sp_SaveVoucher" stored procedure. </li>
+                <li>The system allows editing and viewing of existing vouchers, displaying correct total debits and credits on the voucher list.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h2 class="text-center">Technologies Used:</h2>
+        <hr />
+        <ul class="list-unstyled">
+            <li><strong>Frontend:</strong> ASP.NET Core with Razor Pages</li>
+            <li><strong>Backend/Database:</strong> MS SQL Server (Exclusively using Stored Procedures)</li>
+            <li><strong>Authentication-Authorization:</strong> ASP.NET Identity with Custom Roles</li>
+            <li><strong>Data Access:</strong> No LINQ for database operations</li>
+        </ul>
+        <hr />
+        <p class="mt-2 px-5">
+            "This project is a Mini Accounting System built with ASP.NET Core Razor Pages, emphasizing robust backend operations through SQL stored procedures and a clean, user-friendly interface. It's a software solution designed to handle basic accounting tasks for a small-scale operation."
+        </p>
+        <p>
+            <strong>Developed by - Md. Abdul Latif Siyam</strong>
+        </p>
+    </div>
+</div>

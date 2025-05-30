@@ -1,0 +1,55 @@
+﻿@page
+@model Siyam_MiniAccountManagementSystem.Pages.ChartOfAccounts.CreateModel
+@{
+    ViewData["Title"] = "Create New Account";
+}
+
+<h2>Create New Account</h2>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group m-2">
+                <label asp-for="Account.AccountCode" class="control-label"><b>Account Code</b></label>
+                <input asp-for="Account.AccountCode" class="form-control" />
+                <span asp-validation-for="Account.AccountCode" class="text-danger"></span>
+            </div>
+            <div class="form-group m-2">
+                <label asp-for="Account.AccountName" class="control-label"><b>Account Name</b></label>
+                <input asp-for="Account.AccountName" class="form-control" />
+                <span asp-validation-for="Account.AccountName" class="text-danger"></span>
+            </div>
+            <div class="form-group m-2">
+                <label asp-for="Account.AccountType" class="control-label"><b>Account Type</b></label>
+                <select asp-for="Account.AccountType" asp-items="@(new SelectList(Model.AccountTypes))" class="form-control">
+                    <option value="">Select Type</option>
+                </select>
+                <span asp-validation-for="Account.AccountType" class="text-danger"></span>
+            </div>
+            <div class="form-group m-2">
+                <label asp-for="Account.ParentAccountId" class="control-label"><b>Parent Account</b></label>
+                <select asp-for="Account.ParentAccountId" class="form-control" asp-items="Model.ParentAccounts">
+                    <option value="">Select Parent Account</option>
+                </select>
+                <span asp-validation-for="Account.ParentAccountId" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check m-2">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Account.IsActive" /> @Html.DisplayNameFor(model => model.Account.IsActive)
+                </label>
+            </div>
+            <div class="form-group m-2">
+                <input type="submit" value="Save Account " class="btn btn-primary" />
+                <a asp-page="./Index" class="btn btn-secondary d-flex float-end">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

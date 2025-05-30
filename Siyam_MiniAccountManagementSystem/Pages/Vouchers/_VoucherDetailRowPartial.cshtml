@@ -1,0 +1,30 @@
+﻿@model Siyam_MiniAccountManagementSystem.Models.VoucherDetail
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    var index = ViewData["Index"] != null ? (int)ViewData["Index"] : 0;
+    var accountList = ViewData["AccountList"] as IEnumerable<SelectListItem>;
+}
+
+<tr>
+    <td>
+        <select name="Voucher.Details[@index].AccountId" class="form-control account-select"
+                asp-for="AccountId"
+                asp-items="@accountList">
+            <option value="">-- Select Account --</option>
+        </select>
+        <span asp-validation-for="AccountId" class="text-danger"></span>
+    </td>
+    <td>
+        <input type="number" step="0.01" name="Voucher.Details[@index].Debit"
+               asp-for="Debit" class="form-control debit-input" />
+        <span asp-validation-for="Debit" class="text-danger"></span>
+    </td>
+    <td>
+        <input type="number" step="0.01" name="Voucher.Details[@index].Credit"
+               asp-for="Credit" class="form-control credit-input" />
+        <span asp-validation-for="Credit" class="text-danger"></span>
+    </td>
+    <td>
+        <button type="button" class="btn btn-danger remove-detail-row">Remove</button>
+    </td>
+</tr>

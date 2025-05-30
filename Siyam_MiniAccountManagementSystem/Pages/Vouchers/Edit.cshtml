@@ -1,0 +1,188 @@
+﻿@page
+@model Siyam_MiniAccountManagementSystem.Pages.Vouchers.EditModel
+@{
+    ViewData["Title"] = "Edit Voucher";
+}
+
+<h1>Edit @Model.Voucher.VoucherType Voucher</h1>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Voucher.VoucherId" /> @* Hidden field for VoucherId *@
+    <div class="form-group m-2">
+        <label asp-for="Voucher.VoucherDate"><b>Voucher Date</b></label>
+        <input asp-for="Voucher.VoucherDate" class="form-control" type="date" />
+        <span asp-validation-for="Voucher.VoucherDate" class="text-danger"></span>
+    </div>
+    <div class="form-group m-2">
+        <label asp-for="Voucher.ReferenceNo"><b>Reference No.</b></label>
+        <input asp-for="Voucher.ReferenceNo" class="form-control" />
+        <span asp-validation-for="Voucher.ReferenceNo" class="text-danger"></span>
+    </div>
+    <div class="form-group m-2">
+        <label asp-for="Voucher.Narration"><b>Description</b></label>
+        <textarea asp-for="Voucher.Narration" class="form-control"></textarea>
+        <span asp-validation-for="Voucher.Narration" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="Voucher.VoucherType" />
+    <input type="hidden" asp-for="Voucher.CreatedBy" />
+    <input type="hidden" asp-for="Voucher.CreatedDate" />
+
+    <h3>Voucher Details</h3>
+    <tr>
+        <td colspan="4">
+            <button type="button" class="btn btn-success mt-2" id="addDetailRow">Add New Row</button>
+        </td>
+    </tr>
+    <table class="table table-bordered table-striped text-center mt-2" id="voucherDetailsTable">
+        <thead class="bg-info text-white">
+            <tr>
+                <th>Account</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="bg-light">
+            @if (Model.Voucher.Details != null)
+            {
+                @for (int i = 0; i < Model.Voucher.Details.Count; i++)
+                {
+                    <partial name="_VoucherDetailRowPartial" model="Model.Voucher.Details[i]" view-data='new ViewDataDictionary(ViewData) { { "AccountList", Model.AccountList }, { "Index", i } }' />
+                }
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="1">Total:</td>
+                <td><span id="totalDebitDisplay">0.00</span></td>
+                <td><span id="totalCreditDisplay">0.00</span></td>
+                <td></td>
+            </tr>
+
+            <input type="hidden" asp-for="Voucher.TotalDebit" id="Voucher_TotalDebit" />
+            <input type="hidden" asp-for="Voucher.TotalCredit" id="Voucher_TotalCredit" />
+
+        </tfoot>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Update Voucher</button>
+    <a asp-page="./Index" class="btn btn-secondary float-end">Back to List</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        var accountOptions = @Html.Raw(Json.Serialize(Model.AccountList.Select(x => new { Value = x.Value, Text = x.Text })));
+
+        function addVoucherDetailRow(index, detail = { accountId: 0, debit: 0, credit: 0 }) {
+            var tableBody = $('#voucherDetailsTable tbody');
+            var newRowHtml = `
+                <tr>
+                    <td>
+                        <input type="hidden" name="Voucher.Details[${index}].VoucherDetailId" value="${detail.voucherDetailId || 0}" /> @* Hidden field for VoucherDetailId *@
+                        <input type="hidden" name="Voucher.Details[${index}].VoucherId" value="${detail.voucherId || 0}" /> @* Hidden field for VoucherId *@
+                        <select name="Voucher.Details[${index}].AccountId" class="form-control account-select">
+                            <option value="">-- Select Account --</option>
+                            ${accountOptions.map(opt => `<option value="${opt.Value}" ${opt.Value == detail.accountId ? 'selected' : ''}>${opt.Text}</option>`).join('')}
+                        </select>
+                        <span data-valmsg-for="Voucher.Details[${index}].AccountId" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <input type="number" step="0.01" name="Voucher.Details[${index}].Debit" value="${detail.debit}" class="form-control debit-input" />
+                        <span data-valmsg-for="Voucher.Details[${index}].Debit" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <input type="number" step="0.01" name="Voucher.Details[${index}].Credit" value="${detail.credit}" class="form-control credit-input" />
+                        <span data-valmsg-for="Voucher.Details[${index}].Credit" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm remove-detail-row">Remove</button>
+                    </td>
+                </tr>
+            `;
+            tableBody.append(newRowHtml);
+            $.validator.unobtrusive.parse(tableBody.find(`tr:last`)); // Re-parse validation for new elements
+            updateTotals();
+        }
+
+        function updateTotals() {
+            let totalDebit = 0;
+            let totalCredit = 0;
+
+            $('.debit-input').each(function() {
+                totalDebit += parseFloat($(this).val() || 0);
+            });
+
+            $('.credit-input').each(function() {
+                totalCredit += parseFloat($(this).val() || 0);
+            });
+
+            // Update the display spans
+            $('#totalDebitDisplay').text(totalDebit.toFixed(2));
+            $('#totalCreditDisplay').text(totalCredit.toFixed(2));
+
+            // {{!-- IMPORTANT: Update the hidden input fields for submission --}}
+            $('#Voucher_TotalDebit').val(totalDebit.toFixed(2));
+            $('#Voucher_TotalCredit').val(totalCredit.toFixed(2));
+            // {{!-- END IMPORTANT --}}
+        }
+
+        $(document).ready(function () {
+            let detailIndex = @(Model.Voucher.Details?.Count ?? 0);
+
+            // Add initial empty row if no existing details on page load for new voucher, or if existing details are empty
+            // This logic might need adjustment for an "Edit" page. Usually, edit loads existing details.
+            // If you always want at least one row, keep this. If not, remove.
+            if (detailIndex === 0) {
+                // If there are no existing details loaded, add one empty row.
+                // For an edit page, this usually means an empty voucher was somehow selected,
+                // or you intend to allow adding new details to a header-only voucher.
+                addVoucherDetailRow(detailIndex++);
+            }
+
+
+            $('#addDetailRow').click(function () {
+                addVoucherDetailRow(detailIndex++);
+            });
+
+            $(document).on('click', '.remove-detail-row', function () {
+                $(this).closest('tr').remove();
+                updateTotals();
+                // Re-index rows after removal (important for model binding)
+                $('#voucherDetailsTable tbody tr').each(function(i) {
+                    $(this).find('input, select, span[data-valmsg-for]').each(function() {
+                        var name = $(this).attr('name') || $(this).attr('data-valmsg-for');
+                        if (name) {
+                            $(this).attr('name', name.replace(/\[\d+\]/, '[' + i + ']'));
+                            $(this).attr('data-valmsg-for', name.replace(/\[\d+\]/, '[' + i + ']'));
+                        }
+                    });
+                });
+                detailIndex = $('#voucherDetailsTable tbody tr').length; // Update overall index
+            });
+
+            $(document).on('input', '.debit-input', function() {
+                if (parseFloat($(this).val()) > 0) {
+                    // Automatically set credit to 0 if debit is entered
+                    $(this).closest('tr').find('.credit-input').val('0.00');
+                }
+                updateTotals();
+            });
+
+            $(document).on('input', '.credit-input', function() {
+                if (parseFloat($(this).val()) > 0) {
+                    // Automatically set debit to 0 if credit is entered
+                    $(this).closest('tr').find('.debit-input').val('0.00');
+                }
+                updateTotals();
+            });
+
+            // Initial calculation on page load
+            updateTotals();
+        });
+    </script>
+}

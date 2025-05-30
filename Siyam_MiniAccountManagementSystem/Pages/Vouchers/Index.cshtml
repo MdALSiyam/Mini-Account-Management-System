@@ -1,0 +1,81 @@
+﻿@page
+@model Siyam_MiniAccountManagementSystem.Pages.Vouchers.IndexModel
+
+@{
+    ViewData["Title"] = "Vouchers";
+}
+
+<h1>Vouchers</h1>
+
+<p class="mt-2">
+    <a asp-page="Create" asp-route-type="Journal" class="btn btn-secondary btn-sm p-2">Create Journal Voucher</a>
+    <a asp-page="Create" asp-route-type="Payment" class="btn btn-success btn-sm p-2">Create Payment Voucher</a>
+    <a asp-page="Create" asp-route-type="Receipt" class="btn btn-dark btn-sm p-2">Create Receipt Voucher</a>
+</p>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<table class="table table-bordered table-striped text-center">
+    <thead class="bg-info text-white">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Vouchers[0].VoucherDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vouchers[0].VoucherType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vouchers[0].ReferenceNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vouchers[0].Narration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vouchers[0].TotalDebit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vouchers[0].TotalCredit)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Vouchers)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VoucherDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VoucherType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReferenceNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Narration)
+                </td>
+                <td>
+                    @item.TotalDebit.ToString("N2")
+                </td>
+                <td>
+                    @item.TotalCredit.ToString("N2")
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.VoucherId" class="btn btn-primary btn-sm">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.VoucherId" class="btn btn-warning btn-sm">Details</a> |
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@item.VoucherId" onsubmit="return confirm('Are you sure you want to delete this voucher?');" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

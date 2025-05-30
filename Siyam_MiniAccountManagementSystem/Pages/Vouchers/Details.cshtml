@@ -1,0 +1,103 @@
+﻿@page
+@model Siyam_MiniAccountManagementSystem.Pages.Vouchers.DetailsModel
+@{
+    ViewData["Title"] = "Voucher Details";
+}
+
+<h1>Voucher Details</h1>
+
+<div>
+    <h4>Voucher</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4 m-2">
+            @Html.DisplayNameFor(model => model.Voucher.VoucherDate)
+        </dt>
+        <dd class="col-sm-6 m-2">
+            @Html.DisplayFor(model => model.Voucher.VoucherDate)
+        </dd>
+        <dt class="col-sm-4 m-2">
+            @Html.DisplayNameFor(model => model.Voucher.ReferenceNo)
+        </dt>
+        <dd class="col-sm-6 m-2">
+            @Html.DisplayFor(model => model.Voucher.ReferenceNo)
+        </dd>
+        <dt class="col-sm-4 m-2">
+            @Html.DisplayNameFor(model => model.Voucher.VoucherType)
+        </dt>
+        <dd class="col-sm-6 m-2">
+            @Html.DisplayFor(model => model.Voucher.VoucherType)
+        </dd>
+        <dt class="col-sm-4 m-2">
+            @Html.DisplayNameFor(model => model.Voucher.Narration)
+        </dt>
+        <dd class="col-sm-6 m-2">
+            @Html.DisplayFor(model => model.Voucher.Narration)
+        </dd>
+        <dt class="col-sm-4 m-2">
+            @Html.DisplayNameFor(model => model.Voucher.CreatedBy)
+        </dt>
+        <dd class="col-sm-6 m-2">
+            @Html.DisplayFor(model => model.Voucher.CreatedBy)
+        </dd>
+        <dt class="col-sm-4 m-2">
+            @Html.DisplayNameFor(model => model.Voucher.CreatedDate)
+        </dt>
+        <dd class="col-sm-6 m-2">
+            @Html.DisplayFor(model => model.Voucher.CreatedDate)
+        </dd>
+        <dt class="col-sm-4 m-2">
+            @Html.DisplayNameFor(model => model.Voucher.UpdatedBy)
+        </dt>
+        <dd class="col-sm-6 m-2">
+            @Html.DisplayFor(model => model.Voucher.UpdatedBy)
+        </dd>
+        <dt class="col-sm-4 m-2">
+            @Html.DisplayNameFor(model => model.Voucher.UpdatedDate)
+        </dt>
+        <dd class="col-sm-6 m-2">
+            @Html.DisplayFor(model => model.Voucher.UpdatedDate)
+        </dd>
+    </dl>
+
+    <h5>Voucher Details Entries</h5>
+    @if (Model.Voucher.Details != null && Model.Voucher.Details.Any())
+    {
+        <table class="table table-bordered table-striped text-center">
+            <thead class="bg-info text-white">
+                <tr>
+                    <th>Account Code</th>
+                    <th>Account Name</th>
+                    <th>Debit</th>
+                    <th>Credit</th>
+                </tr>
+            </thead>
+            <tbody class="bg-light">
+                @foreach (var detail in Model.Voucher.Details)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => detail.AccountCode)</td>
+                        <td>@Html.DisplayFor(modelItem => detail.AccountName)</td>
+                        <td>@Html.DisplayFor(modelItem => detail.Debit)</td>
+                        <td>@Html.DisplayFor(modelItem => detail.Credit)</td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="text-right"><strong>Total:</strong></td>
+                    <td><strong>@Model.Voucher.Details.Sum(d => d.Debit).ToString("N2")</strong></td>
+                    <td><strong>@Model.Voucher.Details.Sum(d => d.Credit).ToString("N2")</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    }
+    else
+    {
+        <p>No detail entries found for this voucher.</p>
+    }
+</div>
+<div class="mt-2">
+    <a asp-page="./Edit" asp-route-id="@Model.Voucher.VoucherId" class="btn btn-primary">Edit Voucher</a>
+    <a asp-page="./Index" class="btn btn-secondary float-end">Back to List</a>
+</div>
