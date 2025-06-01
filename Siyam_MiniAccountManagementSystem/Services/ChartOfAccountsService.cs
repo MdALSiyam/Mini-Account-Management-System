@@ -1,122 +1,127 @@
 ﻿using Microsoft.Data.SqlClient;
 using Siyam_MiniAccountManagementSystem.Models;
 using System.Data;
-using System.Linq; // Add this using directive for .Any() and .GetColumnSchema()
 
-namespace Siyam_MiniAccountManagementSystem.Services
+public class ChartOfAccountsService
 {
-    public class ChartOfAccountsService
+    private readonly string _connectionString;
+
+    public ChartOfAccountsService(IConfiguration configuration)
     {
-        private readonly string _connectionString;
-
-        public ChartOfAccountsService(IConfiguration configuration)
+        _connectionString = configuration.GetConnectionString("DefaultConnection");
+    }
+    public async Task<IList<ChartOfAccount>> GetAccountsAsync(string? operationType = null)
+    {
+        var accounts = new List<ChartOfAccount>();
+        using (var connection = new SqlConnection(_connectionString))
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
-        }
-
-        public async Task<List<ChartOfAccount>> GetAccountsAsync(string action = "Select", int? accountId = null, string? accountCode = null, string? accountName = null)
-        {
-            var accounts = new List<ChartOfAccount>();
-            using (var conn = new SqlConnection(_connectionString))
+            await connection.OpenAsync();
+            using (var command = new SqlCommand("sp_ManageChartOfAccounts", connection))
             {
-                using (var cmd = new SqlCommand("sp_ManageChartOfAccounts", conn))
+                command.CommandType = CommandType.StoredProcedure;
+                if (string.IsNullOrEmpty(operationType))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Action", action);
-                    cmd.Parameters.AddWithValue("@AccountId", (object)accountId ?? DBNull.Value); // Ensure DBNull for null int?
-                    cmd.Parameters.AddWithValue("@AccountCode", (object)accountCode ?? DBNull.Value); // Ensure DBNull for null string
-                    cmd.Parameters.AddWithValue("@AccountName", (object)accountName ?? DBNull.Value); // Ensure DBNull for null string
-
-                    await conn.OpenAsync();
-                    using (var reader = await cmd.ExecuteReaderAsync())
+                    operationType = "SelectFlat";
+                }
+                command.Parameters.AddWithValue("@OperationType", operationType);
+                command.Parameters.AddWithValue("@AccountId", DBNull.Value);
+                command.Parameters.AddWithValue("@AccountCode", DBNull.Value);
+                command.Parameters.AddWithValue("@AccountName", DBNull.Value);
+                command.Parameters.AddWithValue("@AccountType", DBNull.Value);
+                command.Parameters.AddWithValue("@ParentAccountId", DBNull.Value);
+                command.Parameters.AddWithValue("@IsActive", DBNull.Value);
+                command.Parameters.AddWithValue("@CreatedBy", DBNull.Value);
+                command.Parameters.AddWithValue("@UpdatedBy", DBNull.Value);
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
                     {
-                        // Get column schema once to check for column existence
-                        var columnSchema = reader.GetColumnSchema();
-                        bool hasLevelColumn = columnSchema.Any(col => col.ColumnName == "Level");
-                        bool hasDisplayNameColumn = columnSchema.Any(col => col.ColumnName == "DisplayName");
-
-                        while (reader.Read())
+                        accounts.Add(new ChartOfAccount
                         {
-                            var account = new ChartOfAccount
-                            {
-                                AccountId = reader.GetInt32(reader.GetOrdinal("AccountId")),
-                                AccountCode = reader.GetString(reader.GetOrdinal("AccountCode")),
-                                AccountName = reader.GetString(reader.GetOrdinal("AccountName")),
-                                AccountType = reader.GetString(reader.GetOrdinal("AccountType")),
-                                ParentAccountId = reader.IsDBNull(reader.GetOrdinal("ParentAccountId")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("ParentAccountId")),
-                                ParentAccountName = reader.IsDBNull(reader.GetOrdinal("ParentAccountName")) ? null : reader.GetString(reader.GetOrdinal("ParentAccountName")),
-                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                CreatedDate = reader.GetDateTime(reader.GetOrdinal("CreatedDate")),
-                                UpdatedDate = reader.IsDBNull(reader.GetOrdinal("UpdatedDate")) ? (DateTime?)null : reader.GetDateTime(reader.GetOrdinal("UpdatedDate")),
-                                CreatedBy = reader.IsDBNull(reader.GetOrdinal("CreatedBy")) ? null : reader.GetString(reader.GetOrdinal("CreatedBy")),
-                                UpdatedBy = reader.IsDBNull(reader.GetOrdinal("UpdatedBy")) ? null : reader.GetString(reader.GetOrdinal("UpdatedBy"))
-                            };
-
-                            // Conditionally assign Level and DisplayName if the columns exist
-                            if (hasLevelColumn && !reader.IsDBNull(reader.GetOrdinal("Level")))
-                            {
-                                account.Level = reader.GetInt32(reader.GetOrdinal("Level"));
-                            }
-                            else
-                            {
-                                account.Level = 0; // Default or handle as appropriate for "Select" action
-                            }
-
-                            if (hasDisplayNameColumn && !reader.IsDBNull(reader.GetOrdinal("DisplayName")))
-                            {
-                                account.DisplayName = reader.GetString(reader.GetOrdinal("DisplayName"));
-                            }
-                            else
-                            {
-                                // If DisplayName is not available, use AccountName as default
-                                account.DisplayName = account.AccountName;
-                            }
-
-                            accounts.Add(account);
-                        }
+                            AccountId = reader.GetInt32(reader.GetOrdinal("AccountId")),
+                            AccountCode = reader.GetString(reader.GetOrdinal("AccountCode")),
+                            AccountName = reader.GetString(reader.GetOrdinal("AccountName")),
+                            AccountType = reader.GetString(reader.GetOrdinal("AccountType")),
+                            ParentAccountId = reader.IsDBNull(reader.GetOrdinal("ParentAccountId")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("ParentAccountId")),
+                            ParentAccountName = reader.IsDBNull(reader.GetOrdinal("ParentAccountName")) ? null : reader.GetString(reader.GetOrdinal("ParentAccountName")),
+                            IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                            CreatedBy = reader.IsDBNull(reader.GetOrdinal("CreatedBy")) ? null : reader.GetString(reader.GetOrdinal("CreatedBy")),
+                            CreatedDate = reader.GetDateTime(reader.GetOrdinal("CreatedDate")),
+                            UpdatedBy = reader.IsDBNull(reader.GetOrdinal("UpdatedBy")) ? null : reader.GetString(reader.GetOrdinal("UpdatedBy")),
+                            UpdatedDate = reader.IsDBNull(reader.GetOrdinal("UpdatedDate")) ? (DateTime?)null : reader.GetDateTime(reader.GetOrdinal("UpdatedDate")),
+                            Level = reader.GetInt32(reader.GetOrdinal("Level")),
+                            DisplayName = reader.IsDBNull(reader.GetOrdinal("DisplayName")) ? null : reader.GetString(reader.GetOrdinal("DisplayName"))
+                        });
                     }
                 }
             }
-            return accounts;
         }
-
-        public async Task<int> SaveAccountAsync(ChartOfAccount account, string action)
+        return accounts;
+    }
+    public async Task<ChartOfAccount?> GetAccountByIdAsync(int accountId)
+    {
+        ChartOfAccount? account = null;
+        using (var connection = new SqlConnection(_connectionString))
         {
-            using (var conn = new SqlConnection(_connectionString))
+            await connection.OpenAsync();
+            using (var command = new SqlCommand("sp_ManageChartOfAccounts", connection))
             {
-                using (var cmd = new SqlCommand("sp_ManageChartOfAccounts", conn))
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@OperationType", "SelectOne");
+                command.Parameters.AddWithValue("@AccountId", accountId);
+                command.Parameters.AddWithValue("@AccountCode", DBNull.Value);
+                command.Parameters.AddWithValue("@AccountName", DBNull.Value);
+                command.Parameters.AddWithValue("@AccountType", DBNull.Value);
+                command.Parameters.AddWithValue("@ParentAccountId", DBNull.Value);
+                command.Parameters.AddWithValue("@IsActive", DBNull.Value);
+                command.Parameters.AddWithValue("@CreatedBy", DBNull.Value);
+                command.Parameters.AddWithValue("@UpdatedBy", DBNull.Value);
+                using (var reader = await command.ExecuteReaderAsync())
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Action", action);
-
-                    // AccountId is needed for Update, Delete, and sometimes for Select (if by ID)
-                    if (action == "Update" || action == "Delete" || action == "Select")
+                    if (await reader.ReadAsync())
                     {
-                        cmd.Parameters.AddWithValue("@AccountId", (object)account.AccountId ?? DBNull.Value);
+                        account = new ChartOfAccount
+                        {
+                            AccountId = reader.GetInt32(reader.GetOrdinal("AccountId")),
+                            AccountCode = reader.GetString(reader.GetOrdinal("AccountCode")),
+                            AccountName = reader.GetString(reader.GetOrdinal("AccountName")),
+                            AccountType = reader.GetString(reader.GetOrdinal("AccountType")),
+                            ParentAccountId = reader.IsDBNull(reader.GetOrdinal("ParentAccountId")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("ParentAccountId")),
+                            ParentAccountName = reader.IsDBNull(reader.GetOrdinal("ParentAccountName")) ? null : reader.GetString(reader.GetOrdinal("ParentAccountName")),
+                            IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                            CreatedBy = reader.IsDBNull(reader.GetOrdinal("CreatedBy")) ? null : reader.GetString(reader.GetOrdinal("CreatedBy")),
+                            CreatedDate = reader.GetDateTime(reader.GetOrdinal("CreatedDate")),
+                            UpdatedBy = reader.IsDBNull(reader.GetOrdinal("UpdatedBy")) ? null : reader.GetString(reader.GetOrdinal("UpdatedBy")),
+                            UpdatedDate = reader.IsDBNull(reader.GetOrdinal("UpdatedDate")) ? (DateTime?)null : reader.GetDateTime(reader.GetOrdinal("UpdatedDate")),
+                            Level = reader.GetInt32(reader.GetOrdinal("Level")),
+                            DisplayName = reader.IsDBNull(reader.GetOrdinal("DisplayName")) ? null : reader.GetString(reader.GetOrdinal("DisplayName"))
+                        };
                     }
-
-                    // Parameters for Insert or Update
-                    if (action == "Insert" || action == "Update")
-                    {
-                        cmd.Parameters.AddWithValue("@AccountCode", (object)account.AccountCode ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@AccountName", (object)account.AccountName ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@AccountType", (object)account.AccountType ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@ParentAccountId", (object)account.ParentAccountId ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@IsActive", account.IsActive);
-                        cmd.Parameters.AddWithValue("@CreatedBy", (object)account.CreatedBy ?? DBNull.Value); // Pass CreatedBy
-                        cmd.Parameters.AddWithValue("@UpdatedBy", (object)account.UpdatedBy ?? DBNull.Value); // Pass UpdatedBy
-                    }
-
-                    await conn.OpenAsync();
-                    var result = await cmd.ExecuteScalarAsync(); // For Insert, Update, Delete, returns ID
-
-                    // Handle DBNull result from ExecuteScalar in case SP doesn't return anything or returns NULL
-                    if (result == null || result == DBNull.Value)
-                    {
-                        return 0; // Return 0 or throw an exception if no ID is returned
-                    }
-                    return Convert.ToInt32(result);
                 }
+            }
+        }
+        return account;
+    }
+    public async Task<int> SaveAccountAsync(ChartOfAccount account, string operationType, string? currentUser = null)
+    {
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            await connection.OpenAsync();
+            using (var command = new SqlCommand("sp_ManageChartOfAccounts", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@OperationType", operationType);
+                command.Parameters.AddWithValue("@AccountId", account.AccountId == 0 ? DBNull.Value : (object)account.AccountId);
+                command.Parameters.AddWithValue("@AccountCode", string.IsNullOrEmpty(account.AccountCode) ? DBNull.Value : (object)account.AccountCode);
+                command.Parameters.AddWithValue("@AccountName", string.IsNullOrEmpty(account.AccountName) ? DBNull.Value : (object)account.AccountName);
+                command.Parameters.AddWithValue("@AccountType", string.IsNullOrEmpty(account.AccountType) ? DBNull.Value : (object)account.AccountType);
+                command.Parameters.AddWithValue("@ParentAccountId", account.ParentAccountId.HasValue ? (object)account.ParentAccountId.Value : DBNull.Value);
+                command.Parameters.AddWithValue("@IsActive", account.IsActive);
+                command.Parameters.AddWithValue("@CreatedBy", string.IsNullOrEmpty(currentUser) ? DBNull.Value : (object)currentUser);
+                command.Parameters.AddWithValue("@UpdatedBy", string.IsNullOrEmpty(currentUser) ? DBNull.Value : (object)currentUser);
+                var result = await command.ExecuteScalarAsync();
+                return result != null && result != DBNull.Value ? Convert.ToInt32(result) : 0;
             }
         }
     }

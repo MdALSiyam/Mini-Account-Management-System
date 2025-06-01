@@ -105,7 +105,7 @@
                 </tr>
             `;
             tableBody.append(newRowHtml);
-            $.validator.unobtrusive.parse(tableBody.find(`tr:last`)); // Re-parse validation for new elements
+            $.validator.unobtrusive.parse(tableBody.find(`tr:last`));
             updateTotals();
         }
 
@@ -121,26 +121,17 @@
                 totalCredit += parseFloat($(this).val() || 0);
             });
 
-            // Update the display spans
             $('#totalDebitDisplay').text(totalDebit.toFixed(2));
             $('#totalCreditDisplay').text(totalCredit.toFixed(2));
 
-            // {{!-- IMPORTANT: Update the hidden input fields for submission --}}
             $('#Voucher_TotalDebit').val(totalDebit.toFixed(2));
             $('#Voucher_TotalCredit').val(totalCredit.toFixed(2));
-            // {{!-- END IMPORTANT --}}
         }
 
         $(document).ready(function () {
             let detailIndex = @(Model.Voucher.Details?.Count ?? 0);
 
-            // Add initial empty row if no existing details on page load for new voucher, or if existing details are empty
-            // This logic might need adjustment for an "Edit" page. Usually, edit loads existing details.
-            // If you always want at least one row, keep this. If not, remove.
             if (detailIndex === 0) {
-                // If there are no existing details loaded, add one empty row.
-                // For an edit page, this usually means an empty voucher was somehow selected,
-                // or you intend to allow adding new details to a header-only voucher.
                 addVoucherDetailRow(detailIndex++);
             }
 
@@ -152,7 +143,6 @@
             $(document).on('click', '.remove-detail-row', function () {
                 $(this).closest('tr').remove();
                 updateTotals();
-                // Re-index rows after removal (important for model binding)
                 $('#voucherDetailsTable tbody tr').each(function(i) {
                     $(this).find('input, select, span[data-valmsg-for]').each(function() {
                         var name = $(this).attr('name') || $(this).attr('data-valmsg-for');
@@ -162,12 +152,11 @@
                         }
                     });
                 });
-                detailIndex = $('#voucherDetailsTable tbody tr').length; // Update overall index
+                detailIndex = $('#voucherDetailsTable tbody tr').length;
             });
 
             $(document).on('input', '.debit-input', function() {
                 if (parseFloat($(this).val()) > 0) {
-                    // Automatically set credit to 0 if debit is entered
                     $(this).closest('tr').find('.credit-input').val('0.00');
                 }
                 updateTotals();
@@ -175,13 +164,10 @@
 
             $(document).on('input', '.credit-input', function() {
                 if (parseFloat($(this).val()) > 0) {
-                    // Automatically set debit to 0 if credit is entered
                     $(this).closest('tr').find('.debit-input').val('0.00');
                 }
                 updateTotals();
             });
-
-            // Initial calculation on page load
             updateTotals();
         });
     </script>

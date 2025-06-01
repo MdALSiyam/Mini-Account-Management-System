@@ -75,15 +75,11 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
-        // Safely get account options for JavaScript. Using .ToList() ensures it's materialized.
         var accountOptions = @Html.Raw(Json.Serialize(Model.AccountList.Select(x => new { value = x.Value, text = x.Text }).ToList()));
-
-        // Tracks the next available index for new detail rows
         let detailIndex = 0;
 
         function addVoucherDetailRow(index, detail = { accountId: 0, debit: 0, credit: 0 }) {
             var tableBody = $('#voucherDetailsTable tbody');
-            // Ensure the generated HTML is valid and handles values correctly
             var newRowHtml = `
                 <tr>
                     <td>
@@ -107,11 +103,8 @@
                 </tr>
             `;
             tableBody.append(newRowHtml);
-
-            // Re-parse validation for newly added elements
-            // Crucial for enabling client-side validation on dynamic rows
-            $('form').data('validator', null); // Clear previous validator instance
-            $.validator.unobtrusive.parse($('form')); // Re-parse the entire form
+            $('form').data('validator', null);
+            $.validator.unobtrusive.parse($('form'));
 
             updateTotals();
         }
@@ -121,56 +114,39 @@
             let totalCredit = 0;
 
             $('.debit-input').each(function() {
-                // Use parseFloat and ensure it's not NaN for calculation
                 totalDebit += parseFloat($(this).val() || 0) || 0;
             });
 
             $('.credit-input').each(function() {
-                // Use parseFloat and ensure it's not NaN for calculation
                 totalCredit += parseFloat($(this).val() || 0) || 0;
             });
-
-            // Update the displayed totals
             $('#totalDebitDisplay').text(totalDebit.toFixed(2));
             $('#totalCreditDisplay').text(totalCredit.toFixed(2));
-
-            // Update the hidden input fields to send values to the server
             $('#Voucher_TotalDebit_Hidden').val(totalDebit.toFixed(2));
             $('#Voucher_TotalCredit_Hidden').val(totalCredit.toFixed(2));
         }
 
         $(document).ready(function () {
-            // Initialize detailIndex based on existing rows from the model if they were rendered
             detailIndex = $('#voucherDetailsTable tbody tr').length;
-
-            // Add an initial empty row only if no details were rendered from the model
             if (detailIndex === 0) {
                 addVoucherDetailRow(detailIndex++);
             } else {
-                // If details exist (e.g., after a validation error), ensure totals are calculated on load
                 updateTotals();
             }
-
-            // Click handler for adding a new detail row
             $('#addDetailRow').click(function () {
                 addVoucherDetailRow(detailIndex++);
             });
 
-            // Click handler for removing a detail row (event delegation)
             $(document).on('click', '.remove-detail-row', function () {
                 $(this).closest('tr').remove();
                 updateTotals();
 
-                // Re-index rows after removal (IMPORTANT for model binding)
                 $('#voucherDetailsTable tbody tr').each(function(i) {
                     $(this).find('input, select, span[data-valmsg-for]').each(function() {
                         var name = $(this).attr('name') || $(this).attr('data-valmsg-for');
                         if (name) {
-                            // Update name attribute (e.g., Voucher.Details[0].AccountId)
                             $(this).attr('name', name.replace(/\[\d+\]/, '[' + i + ']'));
-                            // Update data-valmsg-for attribute for validation messages
                             $(this).attr('data-valmsg-for', name.replace(/\[\d+\]/, '[' + i + ']'));
-                            // Update id attribute if it exists, for consistency (optional but good practice)
                             var id = $(this).attr('id');
                             if (id) {
                                 $(this).attr('id', id.replace(/_\d+__/, '_' + i + '__'));
@@ -178,32 +154,26 @@
                         }
                     });
                 });
-                detailIndex = $('#voucherDetailsTable tbody tr').length; // Update the overall index
-
-                // Re-parse validation after re-indexing
+                detailIndex = $('#voucherDetailsTable tbody tr').length;
                 $('form').data('validator', null);
                 $.validator.unobtrusive.parse($('form'));
             });
 
-            // Event handler for Debit input: if debit > 0, set credit to 0
             $(document).on('input', '.debit-input', function() {
                 const debitValue = parseFloat($(this).val());
                 if (debitValue > 0) {
-                    $(this).closest('tr').find('.credit-input').val('0.00'); // Set to '0.00' to clear clearly
+                    $(this).closest('tr').find('.credit-input').val('0.00');
                 }
                 updateTotals();
             });
 
-            // Event handler for Credit input: if credit > 0, set debit to 0
             $(document).on('input', '.credit-input', function() {
                 const creditValue = parseFloat($(this).val());
                 if (creditValue > 0) {
-                    $(this).closest('tr').find('.debit-input').val('0.00'); // Set to '0.00' to clear clearly
+                    $(this).closest('tr').find('.debit-input').val('0.00');
                 }
                 updateTotals();
             });
-
-            // Recalculate totals on page load to reflect any pre-filled or validation-re-rendered data
             updateTotals();
         });
     </script>

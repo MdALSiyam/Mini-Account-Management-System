@@ -1,8 +1,10 @@
 ﻿using Microsoft.Data.SqlClient;
 using Siyam_MiniAccountManagementSystem.Models;
 using System.Data;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
+using System;
 
 namespace Siyam_MiniAccountManagementSystem.Services
 {
@@ -15,141 +17,125 @@ namespace Siyam_MiniAccountManagementSystem.Services
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
-        /// <summary>
-        /// Saves or Updates a voucher and its details.
-        /// </summary>
-        /// <param name="voucher">The Voucher object to save.</param>
-        /// <param name="action">Action to perform: "Insert" or "Update".</param>
-        /// <param name="currentUser">The user performing the action.</param>
-        /// <returns>The VoucherId of the affected voucher.</returns>
-        public async Task<int> SaveVoucherAsync(Voucher voucher, string action, string currentUser)
+        public async Task<int> SaveVoucherAsync(Voucher voucher, string action, string? currentUser)
         {
             using (var conn = new SqlConnection(_connectionString))
             {
-                using (var cmd = new SqlCommand("sp_SaveVoucher", conn)) // Now only handles Insert/Update
+                using (var cmd = new SqlCommand("sp_SaveVoucher", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Action", action);
-
-                    // For 'Insert', VoucherId is output. For 'Update', it's input.
-                    cmd.Parameters.AddWithValue("@VoucherId", voucher.VoucherId > 0 ? voucher.VoucherId : (object)DBNull.Value);
-
-                    // Parameters relevant for Insert or Update actions
-                    cmd.Parameters.AddWithValue("@VoucherDate", voucher.VoucherDate);
-                    cmd.Parameters.AddWithValue("@ReferenceNo", voucher.ReferenceNo ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@VoucherType", voucher.VoucherType ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Narration", (object)voucher.Narration ?? DBNull.Value);
-
-                    // TotalDebit and TotalCredit should ideally be calculated or validated based on details on client side
-                    // or recalculated in the SP before saving the header.
-                    cmd.Parameters.AddWithValue("@TotalDebit", voucher.TotalDebit);
-                    cmd.Parameters.AddWithValue("@TotalCredit", voucher.TotalCredit);
-
                     if (action == "Insert")
                     {
-                        cmd.Parameters.AddWithValue("@CreatedBy", currentUser);
-                        cmd.Parameters.AddWithValue("@UpdatedBy", DBNull.Value); // Null for Insert
-                    }
-                    else if (action == "Update")
-                    {
-                        // Assuming CreatedBy is read from the existing voucher for updates
-                        cmd.Parameters.AddWithValue("@CreatedBy", voucher.CreatedBy ?? (object)DBNull.Value);
-                        cmd.Parameters.AddWithValue("@UpdatedBy", currentUser);
+                        cmd.Parameters.AddWithValue("@VoucherId", DBNull.Value);
                     }
                     else
                     {
-                        throw new ArgumentException("Invalid action for SaveVoucherAsync. Must be 'Insert' or 'Update'.");
+                        if (voucher.VoucherId <= 0)
+                        {
+                            throw new ArgumentException("VoucherId must be a valid, non-zero ID for Update or Delete operations.", nameof(voucher.VoucherId));
+                        }
+                        cmd.Parameters.AddWithValue("@VoucherId", voucher.VoucherId);
                     }
-
-                    // Populate and pass the Table-Valued Parameter (TVP)
-                    DataTable dtVoucherDetails = new DataTable();
-                    dtVoucherDetails.Columns.Add("VoucherDetailId", typeof(int)); // Must match TVP column name and type
-                    dtVoucherDetails.Columns.Add("AccountId", typeof(int));
-                    dtVoucherDetails.Columns.Add("Debit", typeof(decimal));
-                    dtVoucherDetails.Columns.Add("Credit", typeof(decimal));
-
+                    cmd.Parameters.AddWithValue("@VoucherDate", voucher.VoucherDate);
+                    cmd.Parameters.AddWithValue("@ReferenceNo", (object)voucher.ReferenceNo ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@VoucherType", (object)voucher.VoucherType ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Narration", (object)voucher.Narration ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@TotalDebit", voucher.TotalDebit);
+                    cmd.Parameters.AddWithValue("@TotalCredit", voucher.TotalCredit);
+                    cmd.Parameters.AddWithValue("@OperationType", action);
+                    if (action == "Insert")
+                    {
+                        cmd.Parameters.AddWithValue("@CreatedBy", (object)currentUser ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@UpdatedBy", DBNull.Value);
+                    }
+                    else if (action == "Update")
+                    {
+                        cmd.Parameters.AddWithValue("@CreatedBy", (object)voucher.CreatedBy ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@UpdatedBy", (object)currentUser ?? DBNull.Value);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@CreatedBy", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@UpdatedBy", DBNull.Value); 
+                    }
+                    DataTable voucherDetailsTable = new DataTable("VoucherDetailType");
+                    voucherDetailsTable.Columns.Add("AccountId", typeof(int));
+                    voucherDetailsTable.Columns.Add("Debit", typeof(decimal));
+                    voucherDetailsTable.Columns.Add("Credit", typeof(decimal));
                     if (voucher.Details != null)
                     {
                         foreach (var detail in voucher.Details)
                         {
-                            dtVoucherDetails.Rows.Add(
-                                detail.VoucherDetailId,
-                                detail.AccountId,
-                                detail.Debit,
-                                detail.Credit
-                            );
+                            voucherDetailsTable.Rows.Add(detail.AccountId, detail.Debit, detail.Credit);
                         }
                     }
-
-                    SqlParameter tvpParam = cmd.Parameters.AddWithValue("@VoucherDetail_TVP", dtVoucherDetails);
+                    SqlParameter tvpParam = cmd.Parameters.AddWithValue("@VoucherDetails", voucherDetailsTable);
                     tvpParam.SqlDbType = SqlDbType.Structured;
-                    tvpParam.TypeName = "dbo.VoucherDetailType"; // Crucial: This must match your TVP name in SQL Server
-
+                    tvpParam.TypeName = "VoucherDetailType";
                     await conn.OpenAsync();
                     var result = await cmd.ExecuteScalarAsync();
+                    if (result == null || result == DBNull.Value)
+                    {
+                        return 0;
+                    }
                     return Convert.ToInt32(result);
                 }
             }
         }
-
-        /// <summary>
-        /// Retrieves a list of vouchers based on optional filters.
-        /// </summary>
-        /// <param name="voucherId">Optional: Filter by VoucherId.</param>
-        /// <param name="voucherType">Optional: Filter by VoucherType.</param>
-        /// <returns>A list of Voucher objects.</returns>
-        public async Task<List<Voucher>> GetVouchersAsync(int? voucherId = null, string voucherType = null)
+        public async Task<List<Voucher>> GetVouchersAsync()
         {
-            var vouchers = new List<Voucher>();
+            List<Voucher> vouchers = new List<Voucher>();
             using (var conn = new SqlConnection(_connectionString))
             {
-                using (var cmd = new SqlCommand("sp_GetVouchers", conn)) // Calling new sp_GetVouchers
+                using (var cmd = new SqlCommand("sp_GetAllVouchers", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@VoucherId", voucherId.HasValue ? voucherId.Value : (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@VoucherType", string.IsNullOrEmpty(voucherType) ? (object)DBNull.Value : voucherType);
-
                     await conn.OpenAsync();
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         while (reader.Read())
                         {
-                            vouchers.Add(new Voucher
-                            {
-                                VoucherId = reader.GetInt32(reader.GetOrdinal("VoucherId")),
-                                VoucherDate = reader.GetDateTime(reader.GetOrdinal("VoucherDate")),
-                                ReferenceNo = reader.GetString(reader.GetOrdinal("ReferenceNo")),
-                                VoucherType = reader.GetString(reader.GetOrdinal("VoucherType")),
-                                Narration = reader.IsDBNull(reader.GetOrdinal("Narration")) ? null : reader.GetString(reader.GetOrdinal("Narration")),
-                                TotalDebit = reader.GetDecimal(reader.GetOrdinal("TotalDebit")),
-                                TotalCredit = reader.GetDecimal(reader.GetOrdinal("TotalCredit")),
-                                CreatedBy = reader.GetString(reader.GetOrdinal("CreatedBy")),
-                                CreatedDate = reader.GetDateTime(reader.GetOrdinal("CreatedDate")),
-                                UpdatedBy = reader.IsDBNull(reader.GetOrdinal("UpdatedBy")) ? null : reader.GetString(reader.GetOrdinal("UpdatedBy")),
-                                UpdatedDate = reader.IsDBNull(reader.GetOrdinal("UpdatedDate")) ? (DateTime?)null : reader.GetDateTime(reader.GetOrdinal("UpdatedDate"))
-                            });
+                            vouchers.Add(MapVoucherFromReader(reader));
                         }
                     }
                 }
             }
             return vouchers;
         }
-
-        /// <summary>
-        /// Retrieves detailed entries for a specific voucher.
-        /// </summary>
-        /// <param name="voucherId">The ID of the voucher to retrieve details for.</param>
-        /// <returns>A list of VoucherDetail objects.</returns>
-        public async Task<List<VoucherDetail>> GetVoucherDetailsAsync(int voucherId)
+        public async Task<Voucher?> GetVoucherByIdAsync(int voucherId)
         {
-            var details = new List<VoucherDetail>();
+            Voucher? voucher = null;
             using (var conn = new SqlConnection(_connectionString))
             {
-                using (var cmd = new SqlCommand("sp_GetVoucherDetails", conn)) // Calling new sp_GetVoucherDetails
+                using (var cmd = new SqlCommand("sp_GetVoucherById", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@VoucherId", voucherId);
-
+                    await conn.OpenAsync();
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        if (reader.Read())
+                        {
+                            voucher = MapVoucherFromReader(reader);
+                        }
+                    }
+                    if (voucher != null)
+                    {
+                        voucher.Details = await GetVoucherDetailsAsync(voucherId);
+                    }
+                }
+            }
+            return voucher;
+        }
+        public async Task<List<VoucherDetail>> GetVoucherDetailsAsync(int voucherId)
+        {
+            List<VoucherDetail> details = new List<VoucherDetail>();
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                using (var cmd = new SqlCommand("sp_GetVoucherDetailsByVoucherId", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@VoucherId", voucherId);
                     await conn.OpenAsync();
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
@@ -157,13 +143,11 @@ namespace Siyam_MiniAccountManagementSystem.Services
                         {
                             details.Add(new VoucherDetail
                             {
-                                VoucherDetailId = reader.GetInt32(reader.GetOrdinal("VoucherDetailId")),
-                                VoucherId = reader.GetInt32(reader.GetOrdinal("VoucherId")),
-                                AccountId = reader.GetInt32(reader.GetOrdinal("AccountId")),
-                                AccountCode = reader.GetString(reader.GetOrdinal("AccountCode")),
-                                AccountName = reader.GetString(reader.GetOrdinal("AccountName")),
-                                Debit = reader.GetDecimal(reader.GetOrdinal("Debit")),
-                                Credit = reader.GetDecimal(reader.GetOrdinal("Credit"))
+                                VoucherDetailId = reader.GetInt32("VoucherDetailId"),
+                                VoucherId = reader.GetInt32("VoucherId"),
+                                AccountId = reader.GetInt32("AccountId"),
+                                Debit = reader.GetDecimal("Debit"),
+                                Credit = reader.GetDecimal("Credit")
                             });
                         }
                     }
@@ -171,24 +155,22 @@ namespace Siyam_MiniAccountManagementSystem.Services
             }
             return details;
         }
-
-        /// <summary>
-        /// Deletes a voucher and its details.
-        /// </summary>
-        /// <param name="voucherId">The ID of the voucher to delete.</param>
-        public async Task DeleteVoucherAsync(int voucherId)
+        private Voucher MapVoucherFromReader(SqlDataReader reader)
         {
-            using (var conn = new SqlConnection(_connectionString))
+            return new Voucher
             {
-                using (var cmd = new SqlCommand("sp_DeleteVoucher", conn)) // Calling new sp_DeleteVoucher
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@VoucherId", voucherId);
-
-                    await conn.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                }
-            }
+                VoucherId = reader.GetInt32("VoucherId"),
+                VoucherDate = reader.GetDateTime("VoucherDate"),
+                ReferenceNo = reader.GetString("ReferenceNo"),
+                VoucherType = reader.GetString("VoucherType"),
+                Narration = reader.IsDBNull("Narration") ? null : reader.GetString("Narration"),
+                TotalDebit = reader.GetDecimal("TotalDebit"),
+                TotalCredit = reader.GetDecimal("TotalCredit"),
+                CreatedBy = reader.IsDBNull("CreatedBy") ? null : reader.GetString("CreatedBy"),
+                CreatedDate = reader.GetDateTime("CreatedDate"),
+                UpdatedBy = reader.IsDBNull("UpdatedBy") ? null : reader.GetString("UpdatedBy"),
+                UpdatedDate = reader.IsDBNull("UpdatedDate") ? (DateTime?)null : reader.GetDateTime("UpdatedDate")
+            };
         }
     }
 }

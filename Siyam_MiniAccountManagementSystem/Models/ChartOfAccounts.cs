@@ -1,5 +1,4 @@
-﻿// Models/ChartOfAccount.cs
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Siyam_MiniAccountManagementSystem.Models

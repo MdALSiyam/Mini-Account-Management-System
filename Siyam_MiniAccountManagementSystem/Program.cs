@@ -5,7 +5,6 @@ using Siyam_MiniAccountManagementSystem.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -25,7 +24,6 @@ builder.Services.AddScoped<VoucherService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
@@ -33,7 +31,6 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -57,13 +54,12 @@ using (var scope = app.Services.CreateScope())
         }
     }
 
-    // Create a default Admin user if not exists
     var adminUser = await userManager.FindByEmailAsync("siyam@gmail.com");
     if (adminUser == null)
     {
         adminUser = new IdentityUser
         {
-            UserName = "Md_AL_Siyam",
+            UserName = "siyam@gmail.com",
             Email = "siyam@gmail.com",
             EmailConfirmed = true
         };

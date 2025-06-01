@@ -3,79 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\wn1dnee4..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\4vhzbvul..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\gu3qsc4v..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\c0a5hqr1..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\hw2iah4f..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\zxbmfi5a..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\tvoqqgyk..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\qfq0vlye..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\c1hdca4x..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\wvwbbvnm..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\1bgtipgl..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\_voucherdetailrowpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\_voucherdetailrowpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\services\\chartofaccountsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\services\\chartofaccountsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\h5kj40sf..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\50lexoat..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\services\\voucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\services\\voucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\_voucherdetailrowpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\_voucherdetailrowpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -86,80 +87,44 @@
       "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\models\\chartofaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\models\\chartofaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\models\\chartofaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\models\\chartofaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\services\\chartofaccountsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\services\\chartofaccountsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\vouchers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\vouchers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\services\\voucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\services\\voucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\chartofaccounts\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\sp_savevoucher.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\sp_savevoucher.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\data\\migrations\\20250529144633_inits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\data\\migrations\\20250529144633_inits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\data\\migrations\\20250529162635_init2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\data\\migrations\\20250529162635_init2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|c:\\users\\user\\desktop\\qtec-solution-limited\\siyam-practical\\siyam_miniaccountmanagementsystem\\siyam_miniaccountmanagementsystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8DDF790-3056-40C3-BB8A-AF149B12E910}|Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem.csproj|solutionrelative:siyam_miniaccountmanagementsystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -169,310 +134,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:14:15.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "wn1dnee4..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\wn1dnee4..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\wn1dnee4..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\wn1dnee4..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\wn1dnee4..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:30:49.089Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "c0a5hqr1..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\c0a5hqr1..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\c0a5hqr1..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\c0a5hqr1..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\c0a5hqr1..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:24:31.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAswDQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T10:14:29.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "gu3qsc4v..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\gu3qsc4v..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\gu3qsc4v..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\gu3qsc4v..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\gu3qsc4v..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:25:01.987Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "4vhzbvul..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\4vhzbvul..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\4vhzbvul..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\4vhzbvul..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\4vhzbvul..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:25:21.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "hw2iah4f..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\hw2iah4f..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\hw2iah4f..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\hw2iah4f..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\hw2iah4f..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:21:01.378Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "zxbmfi5a..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\zxbmfi5a..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\zxbmfi5a..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\zxbmfi5a..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\zxbmfi5a..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:20:43.737Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "tvoqqgyk..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\tvoqqgyk..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\tvoqqgyk..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\tvoqqgyk..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\tvoqqgyk..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:18:48.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "qfq0vlye..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\qfq0vlye..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\qfq0vlye..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\qfq0vlye..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\qfq0vlye..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:18:34.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "1bgtipgl..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\1bgtipgl..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\1bgtipgl..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\1bgtipgl..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\1bgtipgl..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:16:58.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "wvwbbvnm..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\wvwbbvnm..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\wvwbbvnm..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\wvwbbvnm..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\wvwbbvnm..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:16:41.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "c1hdca4x..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\c1hdca4x..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\c1hdca4x..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\c1hdca4x..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\c1hdca4x..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T18:16:25.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "50lexoat..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\50lexoat..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\50lexoat..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\50lexoat..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\50lexoat..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T16:22:23.282Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T10:23:10.783Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADoAAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T10:35:28.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Program.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Program.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAswEwAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T09:48:04.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T10:20:12.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Create.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAYwFsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T11:23:07.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "20250529162635_init2.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Data\\Migrations\\20250529162635_init2.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Data\\Migrations\\20250529162635_init2.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Data\\Migrations\\20250529162635_init2.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Data\\Migrations\\20250529162635_init2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T16:26:35.591Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml",
-              "ViewState": "AgIAACsAAAAAAAAAAAAiwDsAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T10:43:54.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ChartOfAccountsService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Services\\ChartOfAccountsService.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Services\\ChartOfAccountsService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Services\\ChartOfAccountsService.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Services\\ChartOfAccountsService.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAswHoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:10:35.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "h5kj40sf..sql",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\h5kj40sf..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\h5kj40sf..sql",
-              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\h5kj40sf..sql",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\h5kj40sf..sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T16:24:51.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "VoucherService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Services\\VoucherService.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Services\\VoucherService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Services\\VoucherService.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Services\\VoucherService.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAkwO8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:38:24.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Database.sql",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Database.sql",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Database.sql",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Database.sql",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Database.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T10:06:07.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:24:48.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
               "Title": "_VoucherDetailRowPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\_VoucherDetailRowPartial.cshtml",
               "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\_VoucherDetailRowPartial.cshtml",
@@ -484,163 +150,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ChartOfAccounts.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Models\\ChartOfAccounts.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Models\\ChartOfAccounts.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Models\\ChartOfAccounts.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Models\\ChartOfAccounts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:08:46.183Z"
+              "WhenOpened": "2025-05-29T10:14:15.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJ0AAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T11:23:38.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T12:00:44.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Voucher.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Models\\Voucher.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Models\\Voucher.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Models\\Voucher.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Models\\Voucher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Program.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwCAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:37:46.095Z"
+              "WhenOpened": "2025-05-29T09:48:04.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAmwIoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T11:23:07.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml.cs",
               "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml.cs",
               "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-29T12:00:15.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T11:59:11.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T12:17:08.341Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "20250529144633_inits.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Data\\Migrations\\20250529144633_inits.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Data\\Migrations\\20250529144633_inits.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Data\\Migrations\\20250529144633_inits.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Data\\Migrations\\20250529144633_inits.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T14:46:33.949Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 5,
               "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4AAAABAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T11:58:35.344Z"
+              "WhenOpened": "2025-05-29T10:24:48.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:44:13.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\_ViewImports.cshtml",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T11:49:40.005Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Create.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml.cs",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml.cs",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:20:49.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 4,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml.cs",
               "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml.cs",
               "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-29T10:34:37.319Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAmwEsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:20:49.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Index.cshtml",
@@ -652,26 +247,267 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "sp_SaveVoucher.sql",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\sp_SaveVoucher.sql",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\sp_SaveVoucher.sql",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\sp_SaveVoucher.sql",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\sp_SaveVoucher.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-29T09:44:47.846Z"
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T19:11:11.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\appsettings.json",
-              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\appsettings.json",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\appsettings.json",
-              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-29T09:19:44.816Z"
+              "DocumentIndex": 10,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwEMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T11:58:35.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:44:13.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Privacy.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Privacy.cshtml.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Privacy.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Privacy.cshtml.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Privacy.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T19:11:54.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T19:10:31.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Error.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Error.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Error.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T19:10:18.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T19:10:17.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T10:43:54.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Edit.cshtml",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAowKkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T11:59:11.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Details.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAkwGYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T12:00:44.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Vouchers\\Create.cshtml",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAowK8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T11:23:38.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T10:14:29.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T10:23:10.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T10:35:28.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\ChartOfAccounts\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T10:20:12.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Voucher.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Models\\Voucher.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Models\\Voucher.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Models\\Voucher.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Models\\Voucher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:37:46.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T11:49:40.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ChartOfAccounts.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Models\\ChartOfAccounts.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Models\\ChartOfAccounts.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Models\\ChartOfAccounts.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Models\\ChartOfAccounts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:08:46.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ChartOfAccountsService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Services\\ChartOfAccountsService.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Services\\ChartOfAccountsService.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Services\\ChartOfAccountsService.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Services\\ChartOfAccountsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:10:35.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "VoucherService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Services\\VoucherService.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Services\\VoucherService.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Services\\VoucherService.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Services\\VoucherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T10:38:24.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T10:35:31.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Siyam_MiniAccountManagementSystem\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Qtec-Solution-Limited\\Siyam-Practical\\Siyam_MiniAccountManagementSystem\\Siyam_MiniAccountManagementSystem\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Siyam_MiniAccountManagementSystem\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T12:17:08.341Z"
             }
           ]
         }

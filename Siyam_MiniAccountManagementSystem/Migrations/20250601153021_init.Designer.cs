@@ -9,11 +9,11 @@ using Siyam_MiniAccountManagementSystem.Data;
 
 #nullable disable
 
-namespace Siyam_MiniAccountManagementSystem.Data.Migrations
+namespace Siyam_MiniAccountManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250529161835_nexts")]
-    partial class nexts
+    [Migration("20250601153021_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

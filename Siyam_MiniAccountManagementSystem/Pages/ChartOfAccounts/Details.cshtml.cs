@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
 using Siyam_MiniAccountManagementSystem.Models;
 using Siyam_MiniAccountManagementSystem.Services;
+using System.Threading.Tasks;
 
 namespace Siyam_MiniAccountManagementSystem.Pages.ChartOfAccounts
 {
-    [Authorize(Roles = "Admin,Accountant,Viewer")] // Viewers can also see details
+    [Authorize(Roles = "Admin,Accountant")]
     public class DetailsModel : PageModel
     {
         private readonly ChartOfAccountsService _chartOfAccountsService;
@@ -25,9 +26,7 @@ namespace Siyam_MiniAccountManagementSystem.Pages.ChartOfAccounts
                 return NotFound();
             }
 
-            // Fetch the specific account details
-            var accounts = await _chartOfAccountsService.GetAccountsAsync("Select", id.Value);
-            Account = accounts.FirstOrDefault();
+            Account = await _chartOfAccountsService.GetAccountByIdAsync(id.Value);
 
             if (Account == null)
             {

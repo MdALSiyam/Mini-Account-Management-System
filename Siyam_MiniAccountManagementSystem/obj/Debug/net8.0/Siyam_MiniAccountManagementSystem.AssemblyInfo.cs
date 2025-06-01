@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Siyam_MiniAccountManagementSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9403c815ceb29d1e163fe5a41170be51e3cc8e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+122d4883b78a0595cd0b515981628b4138c8ff8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Siyam_MiniAccountManagementSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Siyam_MiniAccountManagementSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

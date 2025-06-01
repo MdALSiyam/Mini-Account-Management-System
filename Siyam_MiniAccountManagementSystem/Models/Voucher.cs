@@ -17,7 +17,6 @@ namespace Siyam_MiniAccountManagementSystem.Models
         public DateTime? UpdatedDate { get; set; }
         public List<VoucherDetail> Details { get; set; } = new List<VoucherDetail>();
     }
-
     public class VoucherDetail
     {
         public int VoucherDetailId { get; set; }

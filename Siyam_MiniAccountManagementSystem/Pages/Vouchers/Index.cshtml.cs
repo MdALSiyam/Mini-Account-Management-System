@@ -9,7 +9,7 @@ using System.Security.Claims;
 
 namespace Siyam_MiniAccountManagementSystem.Pages.Vouchers
 {
-    [Authorize(Roles = "Admin,Accountant,Viewer")] // All roles can view vouchers
+    [Authorize(Roles = "Admin,Accountant")]
     public class IndexModel : PageModel
     {
         private readonly VoucherService _voucherService;
@@ -23,8 +23,6 @@ namespace Siyam_MiniAccountManagementSystem.Pages.Vouchers
 
         public async Task OnGetAsync()
         {
-            // Old incorrect call: Vouchers = await _voucherService.GetVouchersAsync("Select");
-            // Corrected call:
             Vouchers = await _voucherService.GetVouchersAsync();
         }
 
@@ -32,18 +30,13 @@ namespace Siyam_MiniAccountManagementSystem.Pages.Vouchers
         {
             try
             {
-                // Get the current user's name
                 var currentUser = User.Identity.Name;
                 if (string.IsNullOrEmpty(currentUser))
                 {
-                    // Handle case where user is not logged in or name is not available
                     TempData["ErrorMessage"] = "User information not available. Please log in.";
                     return RedirectToPage();
                 }
-
-                // Create a dummy voucher object with only the ID set for deletion
                 var voucherToDelete = new Voucher { VoucherId = id };
-                // Pass the currentUser parameter
                 await _voucherService.SaveVoucherAsync(voucherToDelete, "Delete", currentUser);
                 TempData["SuccessMessage"] = "Voucher deleted successfully.";
             }
@@ -51,7 +44,7 @@ namespace Siyam_MiniAccountManagementSystem.Pages.Vouchers
             {
                 TempData["ErrorMessage"] = $"Error deleting voucher: {ex.Message}";
             }
-            return RedirectToPage(); // Redirect to the current page to refresh the list
+            return RedirectToPage();
         }
     }
 

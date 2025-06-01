@@ -1,16 +1,15 @@
-﻿// Pages/ChartOfAccounts/CreateModel.cs
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Siyam_MiniAccountManagementSystem.Models;
 using Siyam_MiniAccountManagementSystem.Services;
-using System.Security.Claims; // For getting user details
+using System.Security.Claims;
 
 namespace Siyam_MiniAccountManagementSystem.Pages.ChartOfAccounts
 {
-    [Authorize(Roles = "Admin,Accountant,Viewer")] // Restrict creation to Admin and Accountant roles
+    [Authorize(Roles = "Admin,Accountant")]
     public class CreateModel : PageModel
     {
         private readonly ChartOfAccountsService _chartOfAccountsService;
@@ -21,7 +20,7 @@ namespace Siyam_MiniAccountManagementSystem.Pages.ChartOfAccounts
         }
 
         [BindProperty]
-        public ChartOfAccount Account { get; set; } = new ChartOfAccount(); // FIX: Initialize Account property
+        public ChartOfAccount Account { get; set; } = new ChartOfAccount();
 
         public SelectList ParentAccounts { get; set; }
         public List<string> AccountTypes { get; set; } = new List<string> { "Asset", "Liability", "Equity", "Revenue", "Expense" };
@@ -42,10 +41,8 @@ namespace Siyam_MiniAccountManagementSystem.Pages.ChartOfAccounts
 
             try
             {
-                // Set CreatedBy and UpdatedBy before saving
-                // This assumes your application has a way to get the current user's name/ID
-                Account.CreatedBy = User.FindFirstValue(ClaimTypes.Name) ?? "System"; // Example: Get current user's name
-                Account.UpdatedBy = Account.CreatedBy; // On creation, UpdatedBy is same as CreatedBy
+                Account.CreatedBy = User.FindFirstValue(ClaimTypes.Name) ?? "System";
+                Account.UpdatedBy = Account.CreatedBy;
 
                 int newAccountId = await _chartOfAccountsService.SaveAccountAsync(Account, "Insert");
 
@@ -77,7 +74,6 @@ namespace Siyam_MiniAccountManagementSystem.Pages.ChartOfAccounts
 
         private async Task PopulateParentAccountsDropdown()
         {
-            // Fetch flat list for parent accounts dropdown (no hierarchy needed here)
             var accounts = await _chartOfAccountsService.GetAccountsAsync("SelectFlat");
             ParentAccounts = new SelectList(accounts, "AccountId", "AccountName");
         }
