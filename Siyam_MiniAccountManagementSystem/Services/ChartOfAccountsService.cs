@@ -6,12 +6,57 @@ public class ChartOfAccountsService
 {
     private readonly string _connectionString;
 
-    // Static memory list to maintain accounts during runtime on Render
+    // Static memory list with human names for account names and parent accounts
     private static readonly List<ChartOfAccount> _memoryAccounts = new List<ChartOfAccount>
     {
-        new ChartOfAccount { AccountId = 1, AccountCode = "1000", AccountName = "Assets", AccountType = "Asset", IsActive = true, Level = 1, DisplayName = "1000 - Assets" },
-        new ChartOfAccount { AccountId = 2, AccountCode = "2000", AccountName = "Liabilities", AccountType = "Liability", IsActive = true, Level = 1, DisplayName = "2000 - Liabilities" },
-        new ChartOfAccount { AccountId = 3, AccountCode = "3000", AccountName = "Equity", AccountType = "Equity", IsActive = true, Level = 1, DisplayName = "3000 - Equity" }
+        new ChartOfAccount 
+        { 
+            AccountId = 1, 
+            AccountCode = "1001", 
+            AccountName = "Md. Abdul Karim", 
+            AccountType = "Asset", 
+            ParentAccountId = null,
+            ParentAccountName = null,
+            IsActive = true, 
+            Level = 1, 
+            DisplayName = "1001 - Md. Abdul Karim" 
+        },
+        new ChartOfAccount 
+        { 
+            AccountId = 2, 
+            AccountCode = "1002", 
+            AccountName = "Sadia Rahman", 
+            AccountType = "Liability", 
+            ParentAccountId = 1,
+            ParentAccountName = "Md. Abdul Karim",
+            IsActive = true, 
+            Level = 2, 
+            DisplayName = "1002 - Sadia Rahman" 
+        },
+        new ChartOfAccount 
+        { 
+            AccountId = 3, 
+            AccountCode = "1003", 
+            AccountName = "Tanvir Hossain", 
+            AccountType = "Equity", 
+            ParentAccountId = 1,
+            ParentAccountName = "Md. Abdul Karim",
+            IsActive = true, 
+            Level = 2, 
+            DisplayName = "1003 - Tanvir Hossain" 
+        },
+        new ChartOfAccount 
+        { 
+            AccountId = 4, 
+            AccountCode = "1004", 
+            AccountName = "Nusrat Jahan", 
+            AccountType = "Asset", 
+            ParentAccountId = 2,
+            ParentAccountName = "Sadia Rahman",
+            IsActive = true, 
+            Level = 3, 
+            DisplayName = "1004 - Nusrat Jahan" 
+        }
     };
 
     public ChartOfAccountsService(IConfiguration configuration)
@@ -148,6 +193,16 @@ public class ChartOfAccountsService
             {
                 int newId = _memoryAccounts.Count > 0 ? _memoryAccounts.Max(x => x.AccountId) + 1 : 1;
                 account.AccountId = newId;
+                
+                if (account.ParentAccountId.HasValue)
+                {
+                    var parent = _memoryAccounts.FirstOrDefault(x => x.AccountId == account.ParentAccountId.Value);
+                    if (parent != null)
+                    {
+                        account.ParentAccountName = parent.AccountName;
+                    }
+                }
+
                 account.DisplayName = $"{account.AccountCode} - {account.AccountName}";
                 _memoryAccounts.Add(account);
                 return newId;
