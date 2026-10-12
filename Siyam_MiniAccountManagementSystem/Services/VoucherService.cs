@@ -8,6 +8,45 @@ namespace Siyam_MiniAccountManagementSystem.Services
     {
         private readonly string _connectionString;
 
+        // Static memory list for Vouchers with human names for testing on Render
+        private static readonly List<Voucher> _memoryVouchers = new List<Voucher>
+        {
+            new Voucher
+            {
+                VoucherId = 1,
+                VoucherDate = DateTime.Now.AddDays(-2),
+                ReferenceNo = "REF-001",
+                VoucherType = "Receipt",
+                Narration = "Received cash from Rahim",
+                TotalDebit = 5000.00m,
+                TotalCredit = 5000.00m,
+                CreatedBy = "siyam@gmail.com",
+                CreatedDate = DateTime.Now.AddDays(-2),
+                Details = new List<VoucherDetail>
+                {
+                    new VoucherDetail { VoucherDetailId = 1, VoucherId = 1, AccountId = 1, Debit = 5000.00m, Credit = 0m },
+                    new VoucherDetail { VoucherDetailId = 2, VoucherId = 1, AccountId = 2, Debit = 0m, Credit = 5000.00m }
+                }
+            },
+            new Voucher
+            {
+                VoucherId = 2,
+                VoucherDate = DateTime.Now.AddDays(-1),
+                ReferenceNo = "REF-002",
+                VoucherType = "Payment",
+                Narration = "Paid bill to Karim",
+                TotalDebit = 2000.00m,
+                TotalCredit = 2000.00m,
+                CreatedBy = "siyam@gmail.com",
+                CreatedDate = DateTime.Now.AddDays(-1),
+                Details = new List<VoucherDetail>
+                {
+                    new VoucherDetail { VoucherDetailId = 3, VoucherId = 2, AccountId = 3, Debit = 2000.00m, Credit = 0m },
+                    new VoucherDetail { VoucherDetailId = 4, VoucherId = 2, AccountId = 1, Debit = 0m, Credit = 2000.00m }
+                }
+            }
+        };
+
         public VoucherService(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection") ?? "";
@@ -17,10 +56,51 @@ namespace Siyam_MiniAccountManagementSystem.Services
         {
             try
             {
-                if (string.IsNullOrEmpty(_connectionString)) return 0;
+                if (string.IsNullOrEmpty(_connectionString))
+                {
+                    if (action == "Insert")
+                    {
+                        int newId = _memoryVouchers.Count > 0 ? _memoryVouchers.Max(x => x.VoucherId) + 1 : 1;
+                        voucher.VoucherId = newId;
+                        voucher.CreatedDate = DateTime.Now;
+                        voucher.CreatedBy = currentUser ?? "siyam@gmail.com";
+                        
+                        if (voucher.Details != null)
+                        {
+                            int detailId = _memoryVouchers.SelectMany(v => v.Details ?? new List<VoucherDetail>()).Count() + 1;
+                            foreach (var detail in voucher.Details)
+                            {
+                                detail.VoucherDetailId = detailId++;
+                                detail.VoucherId = newId;
+                            }
+                        }
+                        
+                        _memoryVouchers.Add(voucher);
+                        return newId;
+                    }
+                    else if (action == "Update")
+                    {
+                        var existing = _memoryVouchers.FirstOrDefault(x => x.VoucherId == voucher.VoucherId);
+                        if (existing != null)
+                        {
+                            existing.VoucherDate = voucher.VoucherDate;
+                            existing.ReferenceNo = voucher.ReferenceNo;
+                            existing.VoucherType = voucher.VoucherType;
+                            existing.Narration = voucher.Narration;
+                            existing.TotalDebit = voucher.TotalDebit;
+                            existing.TotalCredit = voucher.TotalCredit;
+                            existing.UpdatedBy = currentUser;
+                            existing.UpdatedDate = DateTime.Now;
+                            existing.Details = voucher.Details;
+                            return existing.VoucherId;
+                        }
+                    }
+                    return voucher.VoucherId > 0 ? voucher.VoucherId : 1;
+                }
 
-                // --- AGER FULL CODE COMMENT KORA HOLLO ---
-                /*
+                /* =========================================================================
+                 * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
+                 * =========================================================================
                 using (var conn = new SqlConnection(_connectionString))
                 {
                     using (var cmd = new SqlCommand("sp_SaveVoucher", conn))
@@ -83,7 +163,7 @@ namespace Siyam_MiniAccountManagementSystem.Services
                         return Convert.ToInt32(result);
                     }
                 }
-                */
+                ========================================================================= */
             }
             catch (Exception)
             {
@@ -94,13 +174,14 @@ namespace Siyam_MiniAccountManagementSystem.Services
 
         public async Task<List<Voucher>> GetVouchersAsync()
         {
-            List<Voucher> vouchers = new List<Voucher>();
+            var vouchers = new List<Voucher>(_memoryVouchers);
             try
             {
                 if (string.IsNullOrEmpty(_connectionString)) return vouchers;
 
-                // --- AGER FULL CODE COMMENT KORA HOLLO ---
-                /*
+                /* =========================================================================
+                 * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
+                 * =========================================================================
                 using (var conn = new SqlConnection(_connectionString))
                 {
                     using (var cmd = new SqlCommand("sp_GetAllVouchers", conn))
@@ -109,6 +190,7 @@ namespace Siyam_MiniAccountManagementSystem.Services
                         await conn.OpenAsync();
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
+                            vouchers.Clear();
                             while (reader.Read())
                             {
                                 vouchers.Add(MapVoucherFromReader(reader));
@@ -116,7 +198,7 @@ namespace Siyam_MiniAccountManagementSystem.Services
                         }
                     }
                 }
-                */
+                ========================================================================= */
             }
             catch (Exception) { }
             return vouchers;
@@ -124,13 +206,14 @@ namespace Siyam_MiniAccountManagementSystem.Services
 
         public async Task<Voucher?> GetVoucherByIdAsync(int voucherId)
         {
-            Voucher? voucher = null;
+            var voucher = _memoryVouchers.FirstOrDefault(x => x.VoucherId == voucherId);
             try
             {
-                if (string.IsNullOrEmpty(_connectionString)) return null;
+                if (string.IsNullOrEmpty(_connectionString)) return voucher;
 
-                // --- AGER FULL CODE COMMENT KORA HOLO ---
-                /*
+                /* =========================================================================
+                 * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
+                 * =========================================================================
                 using (var conn = new SqlConnection(_connectionString))
                 {
                     using (var cmd = new SqlCommand("sp_GetVoucherById", conn))
@@ -151,7 +234,7 @@ namespace Siyam_MiniAccountManagementSystem.Services
                         voucher.Details = await GetVoucherDetailsAsync(voucherId);
                     }
                 }
-                */
+                ========================================================================= */
             }
             catch (Exception) { }
             return voucher;
@@ -159,13 +242,15 @@ namespace Siyam_MiniAccountManagementSystem.Services
 
         public async Task<List<VoucherDetail>> GetVoucherDetailsAsync(int voucherId)
         {
-            List<VoucherDetail> details = new List<VoucherDetail>();
+            var voucher = _memoryVouchers.FirstOrDefault(x => x.VoucherId == voucherId);
+            var details = voucher?.Details ?? new List<VoucherDetail>();
             try
             {
                 if (string.IsNullOrEmpty(_connectionString)) return details;
 
-                // --- AGER FULL CODE COMMENT KORA HOLO ---
-                /*
+                /* =========================================================================
+                 * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
+                 * =========================================================================
                 using (var conn = new SqlConnection(_connectionString))
                 {
                     using (var cmd = new SqlCommand("sp_GetVoucherDetailsByVoucherId", conn))
@@ -175,6 +260,7 @@ namespace Siyam_MiniAccountManagementSystem.Services
                         await conn.OpenAsync();
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
+                            details.Clear();
                             while (reader.Read())
                             {
                                 details.Add(new VoucherDetail
@@ -189,7 +275,7 @@ namespace Siyam_MiniAccountManagementSystem.Services
                         }
                     }
                 }
-                */
+                ========================================================================= */
             }
             catch (Exception) { }
             return details;
