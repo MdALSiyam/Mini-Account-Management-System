@@ -5,10 +5,9 @@ using Siyam_MiniAccountManagementSystem.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-
+// Render-এর জন্য InMemory Database কনফিগারেশন
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseInMemoryDatabase("MiniAccountInMemoryDb"));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -40,31 +39,45 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+// InMemory Database-এর জন্য টেবিল এবং ডিফল্ট রোল/ইউজার তৈরি নিশ্চিত করা
 using (var scope = app.Services.CreateScope())
 {
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-
-    string[] roleNames = { "Admin", "Accountant", "Viewer" };
-    foreach (var roleName in roleNames)
+    var services = scope.ServiceProvider;
+    try
     {
-        if (!await roleManager.RoleExistsAsync(roleName))
+        var context = services.GetRequiredService<ApplicationDbContext>();
+        context.Database.EnsureCreated();
+
+        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+        var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
+
+        string[] roleNames = { "Admin", "Accountant", "Viewer" };
+        foreach (var roleName in roleNames)
         {
-            await roleManager.CreateAsync(new IdentityRole(roleName));
+            if (!await roleManager.RoleExistsAsync(roleName))
+            {
+                await roleManager.CreateAsync(new IdentityRole(roleName));
+            }
+        }
+
+        var adminUser = await userManager.FindByEmailAsync("siyam@gmail.com");
+        if (adminUser == null)
+        {
+            adminUser = new IdentityUser
+            {
+                UserName = "siyam@gmail.com",
+                Email = "siyam@gmail.com",
+                EmailConfirmed = true
+            };
+            await userManager.CreateAsync(adminUser, "Siyam@123"); 
+            await userManager.AddToRoleAsync(adminUser, "Admin");
         }
     }
-
-    var adminUser = await userManager.FindByEmailAsync("siyam@gmail.com");
-    if (adminUser == null)
+    catch (Exception ex)
     {
-        adminUser = new IdentityUser
-        {
-            UserName = "siyam@gmail.com",
-            Email = "siyam@gmail.com",
-            EmailConfirmed = true
-        };
-        await userManager.CreateAsync(adminUser, "Siyam@123"); 
-        await userManager.AddToRoleAsync(adminUser, "Admin");
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while seeding the database.");
     }
 }
 
