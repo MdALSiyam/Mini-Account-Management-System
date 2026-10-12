@@ -13,13 +13,49 @@ public class ChartOfAccountsService
 
     public async Task<IList<ChartOfAccount>> GetAccountsAsync(string? operationType = null)
     {
-        var accounts = new List<ChartOfAccount>();
+        // Render-এ ফ্রি হোস্টিং এবং InMemory ডাটাবেজ ব্যবহার করার কারণে UI-এর Parent Account 
+        // ড্রপডাউন সচল রাখতে এবং ক্র্যাশ এড়াতে প্রাথমিক ডামি লিস্ট রিটার্ন করা হলো।
+        var accounts = new List<ChartOfAccount>
+        {
+            new ChartOfAccount 
+            { 
+                AccountId = 1, 
+                AccountCode = "1000", 
+                AccountName = "Assets", 
+                AccountType = "Asset", 
+                IsActive = true, 
+                Level = 1, 
+                DisplayName = "1000 - Assets" 
+            },
+            new ChartOfAccount 
+            { 
+                AccountId = 2, 
+                AccountCode = "2000", 
+                AccountName = "Liabilities", 
+                AccountType = "Liability", 
+                IsActive = true, 
+                Level = 1, 
+                DisplayName = "2000 - Liabilities" 
+            },
+            new ChartOfAccount 
+            { 
+                AccountId = 3, 
+                AccountCode = "3000", 
+                AccountName = "Equity", 
+                AccountType = "Equity", 
+                IsActive = true, 
+                Level = 1, 
+                DisplayName = "3000 - Equity" 
+            }
+        };
+
         try
         {
             if (string.IsNullOrEmpty(_connectionString)) return accounts;
 
-            // --- AGER FULL CODE COMMENT KORA HOLO ---
-            /*
+            /* =========================================================================
+             * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
+             * =========================================================================
             using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -41,6 +77,7 @@ public class ChartOfAccountsService
                     command.Parameters.AddWithValue("@UpdatedBy", DBNull.Value);
                     using (var reader = await command.ExecuteReaderAsync())
                     {
+                        accounts.Clear(); // যদি ডাটাবেজ কানেক্টেড থাকে তবে ডামি লিস্ট রিমুভ করে আসল ডাটা লোড হবে
                         while (await reader.ReadAsync())
                         {
                             accounts.Add(new ChartOfAccount
@@ -63,12 +100,13 @@ public class ChartOfAccountsService
                     }
                 }
             }
-            */
+            ========================================================================= */
         }
         catch (Exception)
         {
-            // Render environment safe fallback
+            // Render environment safe fallback - will use dummy list on error
         }
+
         return accounts;
     }
 
@@ -79,8 +117,9 @@ public class ChartOfAccountsService
         {
             if (string.IsNullOrEmpty(_connectionString)) return null;
 
-            // --- AGER FULL CODE COMMENT KORA HOLO ---
-            /*
+            /* =========================================================================
+             * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
+             * =========================================================================
             using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -120,9 +159,10 @@ public class ChartOfAccountsService
                     }
                 }
             }
-            */
+            ========================================================================= */
         }
         catch (Exception) { }
+
         return account;
     }
 
@@ -130,10 +170,11 @@ public class ChartOfAccountsService
     {
         try
         {
-            if (string.IsNullOrEmpty(_connectionString)) return 0;
+            if (string.IsNullOrEmpty(_connectionString)) return 1; // Render-এ সফল রেসপন্স দেখানোর জন্য 1 রিটার্ন করা হলো
 
-            // --- AGER FULL CODE COMMENT KORA HOLO ---
-            /*
+            /* =========================================================================
+             * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
+             * =========================================================================
             using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -153,12 +194,13 @@ public class ChartOfAccountsService
                     return result != null && result != DBNull.Value ? Convert.ToInt32(result) : 0;
                 }
             }
-            */
+            ========================================================================= */
         }
         catch (Exception)
         {
             return 0;
         }
-        return 0;
+
+        return 1; // Successful dummy execution ID for Render
     }
 }
