@@ -6,6 +6,14 @@ public class ChartOfAccountsService
 {
     private readonly string _connectionString;
 
+    // Static memory list to maintain accounts during runtime on Render
+    private static readonly List<ChartOfAccount> _memoryAccounts = new List<ChartOfAccount>
+    {
+        new ChartOfAccount { AccountId = 1, AccountCode = "1000", AccountName = "Assets", AccountType = "Asset", IsActive = true, Level = 1, DisplayName = "1000 - Assets" },
+        new ChartOfAccount { AccountId = 2, AccountCode = "2000", AccountName = "Liabilities", AccountType = "Liability", IsActive = true, Level = 1, DisplayName = "2000 - Liabilities" },
+        new ChartOfAccount { AccountId = 3, AccountCode = "3000", AccountName = "Equity", AccountType = "Equity", IsActive = true, Level = 1, DisplayName = "3000 - Equity" }
+    };
+
     public ChartOfAccountsService(IConfiguration configuration)
     {
         _connectionString = configuration.GetConnectionString("DefaultConnection") ?? "";
@@ -13,41 +21,7 @@ public class ChartOfAccountsService
 
     public async Task<IList<ChartOfAccount>> GetAccountsAsync(string? operationType = null)
     {
-        // Render-এ ফ্রি হোস্টিং এবং InMemory ডাটাবেজ ব্যবহার করার কারণে UI-এর Parent Account 
-        // ড্রপডাউন সচল রাখতে এবং ক্র্যাশ এড়াতে প্রাথমিক ডামি লিস্ট রিটার্ন করা হলো।
-        var accounts = new List<ChartOfAccount>
-        {
-            new ChartOfAccount 
-            { 
-                AccountId = 1, 
-                AccountCode = "1000", 
-                AccountName = "Assets", 
-                AccountType = "Asset", 
-                IsActive = true, 
-                Level = 1, 
-                DisplayName = "1000 - Assets" 
-            },
-            new ChartOfAccount 
-            { 
-                AccountId = 2, 
-                AccountCode = "2000", 
-                AccountName = "Liabilities", 
-                AccountType = "Liability", 
-                IsActive = true, 
-                Level = 1, 
-                DisplayName = "2000 - Liabilities" 
-            },
-            new ChartOfAccount 
-            { 
-                AccountId = 3, 
-                AccountCode = "3000", 
-                AccountName = "Equity", 
-                AccountType = "Equity", 
-                IsActive = true, 
-                Level = 1, 
-                DisplayName = "3000 - Equity" 
-            }
-        };
+        var accounts = new List<ChartOfAccount>(_memoryAccounts);
 
         try
         {
@@ -77,7 +51,7 @@ public class ChartOfAccountsService
                     command.Parameters.AddWithValue("@UpdatedBy", DBNull.Value);
                     using (var reader = await command.ExecuteReaderAsync())
                     {
-                        accounts.Clear(); // যদি ডাটাবেজ কানেক্টেড থাকে তবে ডামি লিস্ট রিমুভ করে আসল ডাটা লোড হবে
+                        accounts.Clear();
                         while (await reader.ReadAsync())
                         {
                             accounts.Add(new ChartOfAccount
@@ -104,7 +78,7 @@ public class ChartOfAccountsService
         }
         catch (Exception)
         {
-            // Render environment safe fallback - will use dummy list on error
+            // Render environment safe fallback
         }
 
         return accounts;
@@ -112,10 +86,10 @@ public class ChartOfAccountsService
 
     public async Task<ChartOfAccount?> GetAccountByIdAsync(int accountId)
     {
-        ChartOfAccount? account = null;
+        ChartOfAccount? account = _memoryAccounts.FirstOrDefault(x => x.AccountId == accountId);
         try
         {
-            if (string.IsNullOrEmpty(_connectionString)) return null;
+            if (string.IsNullOrEmpty(_connectionString)) return account;
 
             /* =========================================================================
              * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
@@ -170,7 +144,14 @@ public class ChartOfAccountsService
     {
         try
         {
-            if (string.IsNullOrEmpty(_connectionString)) return 1; // Render-এ সফল রেসপন্স দেখানোর জন্য 1 রিটার্ন করা হলো
+            if (string.IsNullOrEmpty(_connectionString))
+            {
+                int newId = _memoryAccounts.Count > 0 ? _memoryAccounts.Max(x => x.AccountId) + 1 : 1;
+                account.AccountId = newId;
+                account.DisplayName = $"{account.AccountCode} - {account.AccountName}";
+                _memoryAccounts.Add(account);
+                return newId;
+            }
 
             /* =========================================================================
              * ORIGINAL SQL SERVER STORED PROCEDURE IMPLEMENTATION (FOR FUTURE USE)
@@ -201,6 +182,6 @@ public class ChartOfAccountsService
             return 0;
         }
 
-        return 1; // Successful dummy execution ID for Render
+        return 1;
     }
 }
